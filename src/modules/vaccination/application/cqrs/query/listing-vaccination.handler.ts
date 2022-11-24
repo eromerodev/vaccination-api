@@ -20,8 +20,8 @@ export class ListingVaccinationHandler
 
   async execute(): Promise<VaccinationDto[]> {
     const data = await this.vaccinationRepository.findAll();
-    return map(data, (drug: Vaccination) => {
-      return { ...drug, date: drug.date.toISOString() };
+    return map(data, (vaccination: Vaccination) => {
+      return { ...vaccination, date: vaccination.date.toISOString() };
     }) as VaccinationDto[];
   }
 }
