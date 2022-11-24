@@ -28,8 +28,8 @@ export class VaccinationRequestDto {
   date: string;
 }
 
-export type CreateVaccinationRequest = VaccinationRequestDto;
+export class CreateVaccinationRequest extends VaccinationRequestDto {}
 
-export type UpdateVaccinationRequest = {
+export class UpdateVaccinationRequest extends VaccinationRequestDto {
   id: number;
-} & VaccinationRequestDto;
+}
