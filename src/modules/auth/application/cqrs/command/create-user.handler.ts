@@ -1,10 +1,10 @@
 import * as bcrypt from 'bcrypt';
 import { ConflictException, Inject } from '@nestjs/common';
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
-import { UserAccountDto } from '@auth/application/dto/user-account.dto';
+import { UserAccountDto } from '../../../application/dto/user-account.dto';
+import { IUserRepository } from '../../../domain/interfaces/user-repository.interface';
+import { UserAccount } from '../../../domain/entities/user-account';
 import { CreateUserCommand } from './create-user.command';
-import { IUserRepository } from '@auth/domain/interfaces/user-repository.interface';
-import { UserAccount } from '@auth/domain/entities/user-account';
 
 @CommandHandler(CreateUserCommand)
 export class CreateUserHandler

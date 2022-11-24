@@ -2,10 +2,10 @@ import * as bcrypt from 'bcrypt';
 import { Inject, UnauthorizedException } from '@nestjs/common';
 import { QueryHandler, IQueryHandler } from '@nestjs/cqrs';
 import { JwtService } from '@nestjs/jwt';
-import { JwtPayload } from '@shared/auth/jwt-payload.interface';
-import { UserTokenDto } from '@auth/application/dto/user-token.dto';
+import { JwtPayload } from '../../../../../shared/auth/jwt-payload.interface';
 import { ValidateUserQuery } from './validate-user.query';
-import { IUserRepository } from '@auth/domain/interfaces/user-repository.interface';
+import { UserTokenDto } from '../../../application/dto/user-token.dto';
+import { IUserRepository } from '../../../domain/interfaces/user-repository.interface';
 
 @QueryHandler(ValidateUserQuery)
 export class ValidateUserHandler

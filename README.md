@@ -103,11 +103,18 @@ $ npm run start:dev
 
 ### Test
 
+Unit testing is testing the smallest testable unit of an application.
+
 ```bash
 # unit tests
 $ npm run test
 
 ```
+
+In this example we are gonna testing the signup `use-case`, where a user is created successfully in the database.
+
+<img align="center" src="./docs/images/signup-test.png">
+
 ---
 
 ## Usage
