@@ -119,7 +119,7 @@ In this example we are gonna testing the signup `use-case`, where a user is crea
 
 ## Usage
 
-The api is well document using the Swagger OpenAPI Specification.
+The API is documented using the Swagger OpenAPI Specification.
 
 http://localhost:3000/api
 
